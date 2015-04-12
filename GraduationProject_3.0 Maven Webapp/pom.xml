@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>letv-liyixiang</groupId>
+  <artifactId>GraduationProject_3.0</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>GraduationProject_3.0 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <modules>
+  	<module>mms-common</module>		<!-- 公共服务组件 -->
+  	<module>mms-data-model</module>	<!-- 持久层组件 -->
+    <module>mms-job</module>				<!-- 缓存同步模块 -->
+    <module>mms-query</module>			<!-- 数据库接口服务 -->
+    <module>mms-remote</module>		<!-- 缓存口服务 -->
+    <module>mms-memcache</module>		<!-- 缓存底层模块 -->
+    <module>mms-webapp</module>		<!-- 后台管理模块 -->
+    <module>mms-monitor</module>		<!-- 监控组件 -->
+    <module>mms-cache</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.2.8.RELEASE</spring.version>
+    <ehcache.version>2.4.6</ehcache.version>
+    <c3p0.version>0.9.1.2</c3p0.version>
+    <jackson.version>1.8.3</jackson.version>
+    <joda-time.version>1.6.2</joda-time.version>
+    <httpclient.version>3.1</httpclient.version>
+    <aspectj.version>1.6.8</aspectj.version>
+    <spring.amqp.version>1.1.3.RELEASE</spring.amqp.version>
+  </properties>
+
+  <developers>
+        <developer>
+            <id>mms</id>
+            <name>liyixiang</name>
+            <email>liyixiang@letv.com</email><!-- TODO 申请邮件群组 -->
+            <timezone/>
+        </developer>
+  </developers>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+     </dependency>
+     <dependency>
+       <groupId>commons-dbcp</groupId>
+          <artifactId>commons-dbcp</artifactId>
+          <version>1.4</version>
+      </dependency>
+      <dependency>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis</artifactId>
+          <version>3.1.1</version>
+      </dependency>
+      <dependency>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis-spring</artifactId>
+          <version>1.1.1</version>
+      </dependency>
+      <dependency>
+		 <groupId>mysql</groupId>
+		 <artifactId>mysql-connector-java</artifactId>
+		 <version>5.1.26</version>
+	</dependency>
+      
+     <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+          <version>${spring.version}</version>
+      </dependency> 
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aspects</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-beans</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context-support</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-core</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-test</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>GraduationProject_3.0</finalName>
+  </build>
+  
+</project>
